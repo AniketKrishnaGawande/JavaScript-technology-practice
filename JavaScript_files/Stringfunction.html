@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="This is String";
+        
+
+        document.write("character at i th position--->"+str.charAt(3)+"<br>") 
+        //s --> finds char at mentioned pos -- start at 0
+        document.write("substring between 2 to 7 character--->"+str.substr(2,5)+"<br>")
+        //is is --> from 2nd pos take 5 letters
+        document.write("uppercase--->"+str.toUpperCase()+"<br>"); 
+        // convert str to upper case
+        document.write("Lowercase--->"+str.toLowerCase()+"<br>"); 
+        // convert str to lower case
+        document.write("replace--->"+str.replace("is","are")+"<br>"); 
+        // replace 1st occurance of "is" with "are"
+        document.write("startswith this--->"+str.startsWith("this")+"<br>"); 
+        //false --> check str starting with this or not (case sensitive) 
+        document.write("startswith This--->"+str.startsWith("This")+"<br>"); //true 
+        document.write("endsswith ing--->"+str.endsWith("ing")+"<br>"); 
+        //true --> check str ending with ing or not (case sensitive)
+        document.write("includes St--->"+str.includes("St")+"<br>");
+        //checks whether str having "St" or not (case sensitive)
+        document.write("concate str and 'test' --->"+str.concat("test")+"<br>");
+        //concatinate "test" and end of str
+        document.write("index of  St--->"+str.indexOf("St")+"<br>"); //8
+        // returns index of 1st occurance if not found return -1
+        str1="123:Rajan:designer";
+        //convert : string into seperated string (sep at ;)
+        arr=str1.split(":") // arr=["123","Rajan","designer"]
+        document.write("length : "+arr.length);
+        console.log(arr);
+        str2=arr.join("|"); // joins arr by | inbetween
+        var s="to be not be";
+        var re=/be/gi; // pattern written between /here/  g --> global  i --> ignore
+        document.write("replace with regexp"+s.replace(re,"exists")+"<br>"); // replace all "be" with exists becoz of g in pattern
+        document.write("match with regexp"+s.match(re)+"<br>");  // return all matching string
+
+        //search match and replace
+        var test="Something is there somewhere"
+        var re=/s.*?e/gi
+         document.write("search position of first occurance--->"+test.search(re)+"<br>") //position of first match
+         document.write("array of all matches---> "+test.match(re)+"<br>"); //all occurances
+         document.write("replace all matches---> "+test.replace(re,"any")+"<br>");// replace all
+         document.write("slice the string from 6 the position onward---> "+str.slice(6)+"<br>"); // return string from 6 to end
+         document.write("slice the string between 2 and 8 ---> "+str.slice(2,9)+"<br>"); // return from index 2 to 8 end index is exxcluded
+         str.substring(-4); 
+         
+
+
+
+
+
+
+    </script
+</body>
+</html>

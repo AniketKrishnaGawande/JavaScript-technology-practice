@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            width: 200px;
+        }
+    </style>
+
+    <script>
+        var i = 1;
+        function deleteData()
+        {
+
+
+
+
+
+        }
+        function add() {
+            str = "<tr id='" + i + "'>";
+            str = str + "<td><select name='edu" + i + "' id='edu" + i + "' required><option name='edu" + i + "' id='nan" + i + "' value='nan'>----select one-----</option>"
+                + "<option name='edu" + i + "' id='10th" + i + "' value='10th'>10th</option>"
+                + "<option name='edu" + i + "' id='12th" + i + "' value='12th'>12th</option>"
+                + "<option name='edu" + i + "' id='Graduation" + i + "' value='Graduation'>Graduation</option>"
+                + "<option name='edu" + i + "' id='post_Graduation" + i + "' value='post Graduation'>Post Graduation</option>"
+                + "</select><span style='color: red;'>*</span></td>"
+                + "<td><input type='text' name='spec" + i + "' id='spec" + i + "' placeholder='Enter specialised domain'></td>"
+                + "<td><input type='text' name='iName" + i + "' id='iName" + i + "' placeholder='Enter Institute' required><span style='color: red;'>*</span></td>"
+                + "<td><input type='text' name='uName" + i + "' id='uName" + i + "' placeholder='Enter university' required><span style='color: red;'>*</span></td>"
+                + "<td><input type='number' name='marks" + i + "' id='marks" + i + "' placeholder='CGPA/Percentage' required><span style='color: red;'>*</span></td>"
+                + "<td><button name='delete" + i + "' id='" + i + "' onclick='deleteData()'>delete</button></td>"
+                + "<td><button name='done" + i + "' id='done" + i + "' onclick='done()'>done</button></td>"
+                + "<td><button name='edit" + i + "' id='edit" + i + "' onclick='edit()'>edit</button></td></tr>"
+
+
+            document.getElementById("table").innerHTML += str;
+
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Education details</h2>
+    <button name="add" id="add" onclick="add()">Add More</button>
+    <table>
+        <tr>
+            <th>Course/std</th>
+            <th>specialisation</th>
+            <th>Institute Name</th>
+            <th>University Name</th>
+            <th>CGPA/percentage</th>
+        </tr>
+      <!--   <tr id="1">
+            <td>
+                <select name="edu" id="edu" required>
+                    <option name="edu" id="nan" value="nan">----select one-----</option>
+                    <option name="edu" id="10th" value="10th">10th</option>
+                    <option name="edu" id="12th" value="12th">12th</option>
+                    <option name="edu" id="Graduation" value="Graduation">Graduation</option>
+                    <option name="edu" id="post_Graduation" value="post Graduation">Post Graduation</option>
+                </select><span style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="text" name="spec" id="spec" placeholder="Enter specialised domain">
+            </td>
+            <td>
+                <input type="text" name="iName" id="iName" placeholder="Enter Institute" required><span
+                    style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="text" name="uName" id="uName" placeholder="Enter university" required><span
+                    style="color: red;">*</span>
+            </td>
+            <td>
+                <input type="number" name="marks" id="marks" placeholder="CGPA/Percentage" required><span
+                    style="color: red;">*</span>
+            </td>
+            <td>
+                <button name="delete" id="1" onclick="deleteData()">delete</button>
+            </td>
+            <td>
+                <button name="done" id="done" onclick="done()">done</button>
+            </td>
+            <td>
+                <button name="edit" id="edit" onclick="edit()">edit</button>
+            </td>
+        </tr> -->
+    </table>
+
+
+
+</body>
+
+</html>
