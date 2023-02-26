@@ -1,0 +1,10 @@
+const express=require('express');
+const app = express();
+const bodyparse=require('body-parser');
+const route=require('./Router/Routed');
+app.use(bodyparse.json());
+app.use(bodyparse.urlencoded({extended:true}));
+app.use("/",route);
+app.listen(3000);
+console.log("server started at 3500");
+module.exports=app;
