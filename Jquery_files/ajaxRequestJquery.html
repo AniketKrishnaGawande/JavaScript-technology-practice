@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            border: 2px solid red;
+            border-radius: 6px;
+
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            function displaytable(result) {
+                str = "<table><tr><th>Id </th><th>user ID</th><th>title </th><th>body</th></tr>"
+                for (var ob of result) {
+                    str = str + "<tr><td>" + ob.id + "</td><td>" + ob.userId + "</td><td>" + ob.title + "</td><td>" + ob.body + "</td></tr>"
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            }
+            // after clicking on get data button having id btn ajax request should read data and display it
+            $('#btn').click(function () {
+                $.ajax({
+                   //step 1
+                    async: true,
+                    //step 2
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                    //step 3
+                    type: "GET",  // method type is get coz need to read data
+                    // if ajax request submitted successfully
+                    success: function (result) {
+                        displaytable(result);  // automatically converted json to java script
+
+                    },
+                    // if ajax request submitted unsuccessfully
+                    error: function (xhr, status, error) {
+                        alert("error occured, status" + status);
+                        console.log(error);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button type="button" name="btn" id="btn">get Data</button>
+    <div id="mydiv">
+
+    </div>
+</body>
+
+</html>
